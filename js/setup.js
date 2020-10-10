@@ -9,6 +9,8 @@ function start() {
 
 
     var jogo = {};
+    var velocidade = 5;
+    var posicaoY = parseInt(Math.random() * 334);
     var TECLA = {
         W: 87,
         S: 83,
