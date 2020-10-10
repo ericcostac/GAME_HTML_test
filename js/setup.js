@@ -36,6 +36,7 @@ function start() {
 
         movefundo();
         movejogador();
+        moveinimigo1();
     }
 
     /*MOVER FUNDO DO GAME*/
@@ -74,5 +75,19 @@ function start() {
 		
 	}
 
+ }
+
+ function moveinimigo1() {
+
+	posicaoX = parseInt($("#inimigo1").css("left"));
+	$("#inimigo1").css("left",posicaoX-velocidade);
+	$("#inimigo1").css("top",posicaoY);
+		
+		if (posicaoX<=0) {
+		posicaoY = parseInt(Math.random() * 334);
+		$("#inimigo1").css("left",694);
+		$("#inimigo1").css("top",posicaoY);
+			
+		}
 }
 }
