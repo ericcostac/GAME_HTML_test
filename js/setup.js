@@ -9,6 +9,7 @@ function start() {
 
     var jogo = {};
     var podeAtirar = true;
+    var colisao1 = ;
     var velocidade = 5;
     var posicaoY = parseInt(Math.random() * 334);
     var TECLA = {
@@ -39,6 +40,7 @@ function start() {
         moveinimigo1();
         moveinimigo2();
         moveamigo();
+        colisao();
     }
 
     /*MOVER FUNDO DO GAME*/
@@ -147,4 +149,12 @@ function start() {
              }
         }
     } 
+
+    function colisao() {
+        var colisao1 = ($("#jogador").collision($("#inimigo1")));
+        // jogador com o inimigo1
+    
+        console.log(colisao1);
+    
+    }
  }
